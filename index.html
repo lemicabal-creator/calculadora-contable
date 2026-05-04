@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Contable | @contabilidadsinmultas</title>
+    <style>
+        :root { --primary: #2c3e50; --secondary: #27ae60; --bg: #f4f7f6; }
+        body { font-family: sans-serif; background: var(--bg); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .card { background: white; padding: 2rem; border-radius: 12px; shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 350px; text-align: center; }
+        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background: var(--secondary); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .result { margin-top: 20px; padding: 10px; background: #e8f5e9; border-radius: 5px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Calculadora de Sueldo</h2>
+        <p>@contabilidadsinmultas</p>
+        <input type="number" id="sueldo" placeholder="Sueldo Bruto (Ej: 3000)">
+        <button onclick="calcular()">Calcular Neto</button>
+        <div id="resultado" class="result">
+            <strong>Sueldo Neto: S/ <span id="monto"></span></strong>
+        </div>
+    </div>
+    <script>
+        function calcular() {
+            const s = document.getElementById('sueldo').value;
+            if(s > 0) {
+                const neto = s * 0.87; // Descuento aproximado del 13%
+                document.getElementById('monto').innerText = neto.toFixed(2);
+                document.getElementById('resultado').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
 
