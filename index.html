@@ -1,241 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contabilidad Sin Multas | Asesoría Profesional</title>
+    <title>Contabilidad Sin Multas | Asesoría Contable en Perú para Emprendedores</title>
+    <meta name="description" content="Evita multas de SUNAT con asesoría contable experta en Perú. Especialistas en RUC 20, Nuevo RUS, Régimen MYPE y gestión de planillas. ¡Protege tu negocio hoy!">
+    <meta name="keywords" content="contabilidad peru, asesoría contable lima, evitar multas sunat, ruc 20, nuevo rus, regimen mype, declaraciones sunat, contador para emprendedores, contabilidad sin multas">
+    <meta name="author" content="Contabilidad Sin Multas">
+    <link rel="canonical" href="https://lemicabal-creator.github.io/calculadora-contable/">
+
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="Contabilidad Sin Multas | Asesoría Contable Profesional">
+    <meta property="og:description" content="No dejes que las multas detengan tu crecimiento. Expertos en prevención tributaria y gestión contable para dueños de negocio.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1454165833767-027ffea7028c?q=80&w=400">
+    <meta property="og:url" content="https://lemicabal-creator.github.io/calculadora-contable/">
+    <meta property="og:type" content="website">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* CAMBIA ESTOS COLORES POR LOS DE TU LOGO */
-            --color-primario: #002e5d; /* Azul Oscuro */
-            --color-secundario: #c5a022; /* Dorado/Bronce */
-            --color-fondo: #f4f7f9;
-            --color-texto: #333;
-            --blanco: #ffffff;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-fondo);
-            color: var(--color-texto);
-        }
-
-        h1, h2, h3, .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-
-        /* Barra de Navegación */
-        nav {
-            background-color: var(--color-primario);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            color: var(--blanco);
-            text-decoration: none;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 40px; /* Aquí irá tu logo cuando tengas el archivo */
-            border-radius: 5px;
-        }
-
-        .menu {
-            display: flex;
-            gap: 20px;
-        }
-
-        .menu a {
-            color: var(--blanco);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .menu a:hover {
-            color: var(--color-secundario);
-        }
-
-        /* Sección Hero */
-        .hero {
-            background: linear-gradient(rgba(0,46,93,0.8), rgba(0,46,93,0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80') no-repeat center/cover;
-            color: var(--blanco);
-            padding: 80px 5%;
-            text-align: center;
-        }
-
-        /* Categorías / Regímenes */
-        .section-title {
-            text-align: center;
-            margin: 40px 0 20px;
-            color: var(--color-primario);
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 0 5% 40px;
-        }
-
-        .category-card {
-            background: var(--blanco);
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-bottom: 4px solid var(--color-secundario);
-            transition: transform 0.3s;
-        }
-
-        .category-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Calculadora */
-        .calc-section {
-            background-color: var(--blanco);
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        button {
-            width: 100%;
-            background-color: var(--color-primario);
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background-color: #004080;
-        }
-
-        .result {
-            margin-top: 20px;
-            padding: 15px;
-            background: #eef2f7;
-            border-radius: 8px;
-            display: none;
-        }
-
-        /* Botón WhatsApp Flotante */
-        .btn-ws {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            text-decoration: none;
-            font-size: 30px;
-            z-index: 1000;
-        }
-
-        @media (max-width: 600px) {
-            .menu { display: none; } /* En móvil el menú se oculta por simplicidad ahora */
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <a href="#" class="logo">
-            <!-- REEMPLAZAR 'logo.png' CON LA URL DE TU LOGO CUANDO LA TENGAS -->
-            <div style="background: var(--color-secundario); padding: 5px; border-radius: 3px;">CSM</div>
-            @contabilidadsinmultas
-        </a>
-        <div class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#categorias">Categorías</a>
-            <a href="#calculadora">Calculadora</a>
-            <a href="https://wa.me/51999999999">Contacto</a>
-        </div>
-    </nav>
-
-    <section class="hero" id="inicio">
-        <h1>Protege tu patrimonio, declara sin multas</h1>
-        <p>Asesoría contable especializada para emprendedores y dueños de negocio.</p>
-    </section>
-
-    <h2 class="section-title" id="categorias">Categorías de Servicios</h2>
-    <div class="categories-grid">
-        <div class="category-card">
-            <h3>Nuevo RUS</h3>
-            <p>Ideal para pequeños negocios y bodegas.</p>
-        </div>
-        <div class="category-card">
-            <h3>Régimen Especial</h3>
-            <p>Para empresas de comercialización y servicios.</p>
-        </div>
-        <div class="category-card">
-            <h3>Régimen MYPE</h3>
-            <p>Pensado para pequeñas y medianas empresas en crecimiento.</p>
-        </div>
-        <div class="category-card">
-            <h3>Planillas</h3>
-            <p>Gestión de beneficios sociales y boletas de pago.</p>
-        </div>
-    </div>
-
-    <div class="calc-section" id="calculadora">
-        <h2 style="text-align:center; color: var(--color-primario);">Calculadora de Sueldo Neto</h2>
-        <label for="sueldo">Ingresa tu sueldo bruto mensual:</label>
-        <input type="number" id="sueldo" placeholder="S/ 2000.00">
-        <button onclick="calcularNeto()">Calcular Ahora</button>
-        
-        <div id="resultado" class="result">
-            <p>Descuento Ley (13%): <strong id="desc"></strong></p>
-            <p style="font-size: 1.2rem; color: var(--color-primario);">Sueldo Neto: <strong id="neto"></strong></p>
-        </div>
-    </div>
-
     <a href="https://wa.me/996304618?text=Hola,%20vengo%20de%20tu%20web%20y%20necesito%20una%20asesoría" class="btn-ws" target="_blank">
-        W
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
     </a>
 
     <script>
         function calcularNeto() {
             const s = document.getElementById('sueldo').value;
-            if(s > 0) {
+            if (s > 0) {
                 const d = s * 0.13;
                 const n = s - d;
                 document.getElementById('desc').innerText = 'S/ ' + d.toFixed(2);
@@ -244,5 +32,3 @@
             }
         }
     </script>
-</body>
-</html>
