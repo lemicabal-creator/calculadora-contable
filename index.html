@@ -3,233 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contabilidad Sin Multas | Protege tu Negocio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Contabilidad Sin Multas | Asesoría Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a; /* Azul profesional */
-            --secondary: #10b981; /* Verde éxito */
-            --accent: #f59e0b; /* Amarillo alerta/atención */
-            --dark: #111827;
-            --light: #f9fafb;
+            /* CAMBIA ESTOS COLORES POR LOS DE TU LOGO */
+            --color-primario: #002e5d; /* Azul Oscuro */
+            --color-secundario: #c5a022; /* Dorado/Bronce */
+            --color-fondo: #f4f7f9;
+            --color-texto: #333;
+            --blanco: #ffffff;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
         }
 
-        /* Header */
-        header {
-            background: white;
-            padding: 1rem 2rem;
+        h1, h2, h3, .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Barra de Navegación */
+        nav {
+            background-color: var(--color-primario);
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .logo {
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: var(--primary);
+            color: var(--blanco);
             text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* Hero Section */
+        .logo img {
+            height: 40px; /* Aquí irá tu logo cuando tengas el archivo */
+            border-radius: 5px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: var(--color-secundario);
+        }
+
+        /* Sección Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
-            color: white;
-            padding: 4rem 2rem;
+            background: linear-gradient(rgba(0,46,93,0.8), rgba(0,46,93,0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80') no-repeat center/cover;
+            color: var(--blanco);
+            padding: 80px 5%;
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+        /* Categorías / Regímenes */
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: var(--color-primario);
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 5% 40px;
         }
 
-        /* Card Section */
-        .container {
-            max-width: 1000px;
-            margin: -3rem auto 3rem;
-            padding: 0 1rem;
+        .category-card {
+            background: var(--blanco);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--color-secundario);
+            transition: transform 0.3s;
         }
 
-        .main-card {
-            background: white;
-            border-radius: 1.5rem;
-            padding: 2.5rem;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        .category-card:hover {
+            transform: translateY(-5px);
         }
 
-        /* Calculator Styles */
-        .calc-container {
-            max-width: 400px;
-            margin: 2rem auto;
-            padding: 2rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 1rem;
-            background: #f8fafc;
-        }
-
-        .input-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        /* Calculadora */
+        .calc-section {
+            background-color: var(--blanco);
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         input {
             width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #d1d5db;
-            border-radius: 0.5rem;
-            font-size: 1rem;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
 
-        .btn-calc {
+        button {
             width: 100%;
-            padding: 1rem;
-            background: var(--secondary);
+            background-color: var(--color-primario);
             color: white;
+            padding: 15px;
             border: none;
-            border-radius: 0.5rem;
-            font-weight: 700;
+            border-radius: 5px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background 0.3s;
         }
 
-        .btn-calc:hover { background: #059669; }
+        button:hover {
+            background-color: #004080;
+        }
 
-        /* WhatsApp Button */
-        .whatsapp-float {
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef2f7;
+            border-radius: 8px;
+            display: none;
+        }
+
+        /* Botón WhatsApp Flotante */
+        .btn-ws {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: #25d366;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
-            align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            font-size: 30px;
             z-index: 1000;
-            transition: transform 0.3s;
         }
 
-        .whatsapp-float:hover { transform: scale(1.1); }
-
-        .result-box {
-            margin-top: 1.5rem;
-            display: none;
-            padding: 1rem;
-            background: #ecfdf5;
-            border-radius: 0.5rem;
-            border: 1px solid var(--secondary);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #6b7280;
-            font-size: 0.875rem;
-        }
-
-        @media (max-width: 640px) {
-            .hero h1 { font-size: 1.8rem; }
-            .main-card { padding: 1.5rem; }
+        @media (max-width: 600px) {
+            .menu { display: none; } /* En móvil el menú se oculta por simplicidad ahora */
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">@contabilidadsinmultas</a>
-    </header>
+    <nav>
+        <a href="#" class="logo">
+            <!-- REEMPLAZAR 'logo.png' CON LA URL DE TU LOGO CUANDO LA TENGAS -->
+            <div style="background: var(--color-secundario); padding: 5px; border-radius: 3px;">CSM</div>
+            @contabilidadsinmultas
+        </a>
+        <div class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="https://wa.me/51999999999">Contacto</a>
+        </div>
+    </nav>
 
-    <section class="hero">
-        <h1>¿Sabes cuánto te cuesta no declarar bien?</h1>
-        <p>Un error en tus impuestos puede ser la diferencia entre ganar o perder dinero. Protege tu negocio hoy mismo.</p>
+    <section class="hero" id="inicio">
+        <h1>Protege tu patrimonio, declara sin multas</h1>
+        <p>Asesoría contable especializada para emprendedores y dueños de negocio.</p>
     </section>
 
-    <div class="container">
-        <div class="main-card">
-            <h2 style="text-align: center; color: var(--primary);">Calculadora de Sueldo Neto</h2>
-            <p style="text-align: center; color: #6b7280;">Herramienta gratuita para planificar tus finanzas sin sorpresas.</p>
-            
-            <div class="calc-container">
-                <div class="input-group">
-                    <label>Sueldo Bruto Mensual (S/)</label>
-                    <input type="number" id="salary" placeholder="Ej: 3500">
-                </div>
-                <button class="btn-calc" onclick="calcular()">Calcular Descuentos</button>
-
-                <div id="results" class="result-box">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                        <span>Deducción AFP/ONP:</span>
-                        <span id="deduccion" style="font-weight: 600; color: #dc2626;"></span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 800; border-top: 1px solid #d1d5db; pt: 0.5rem;">
-                        <span>Sueldo Neto:</span>
-                        <span id="neto" style="color: var(--secondary);"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <h3>¿Necesitas una asesoría personalizada?</h3>
-                <p>Evita multas, cierres y protege tu RUC 20 con expertos.</p>
-                <p style="font-weight: 600;">Escribe "ASESORÍA" por WhatsApp y recibe un tip gratis.</p>
-            </div>
+    <h2 class="section-title" id="categorias">Categorías de Servicios</h2>
+    <div class="categories-grid">
+        <div class="category-card">
+            <h3>Nuevo RUS</h3>
+            <p>Ideal para pequeños negocios y bodegas.</p>
+        </div>
+        <div class="category-card">
+            <h3>Régimen Especial</h3>
+            <p>Para empresas de comercialización y servicios.</p>
+        </div>
+        <div class="category-card">
+            <h3>Régimen MYPE</h3>
+            <p>Pensado para pequeñas y medianas empresas en crecimiento.</p>
+        </div>
+        <div class="category-card">
+            <h3>Planillas</h3>
+            <p>Gestión de beneficios sociales y boletas de pago.</p>
         </div>
     </div>
 
-    <footer>
-        &copy; 2023 Contabilidad Sin Multas. Todos los derechos reservados.
-    </footer>
+    <div class="calc-section" id="calculadora">
+        <h2 style="text-align:center; color: var(--color-primario);">Calculadora de Sueldo Neto</h2>
+        <label for="sueldo">Ingresa tu sueldo bruto mensual:</label>
+        <input type="number" id="sueldo" placeholder="S/ 2000.00">
+        <button onclick="calcularNeto()">Calcular Ahora</button>
+        
+        <div id="resultado" class="result">
+            <p>Descuento Ley (13%): <strong id="desc"></strong></p>
+            <p style="font-size: 1.2rem; color: var(--color-primario);">Sueldo Neto: <strong id="neto"></strong></p>
+        </div>
+    </div>
 
-    <!-- Botón WhatsApp -->
-    <a href="https://wa.me/996304618?text=Hola!%20Vi%20tu%20video%20y%20quiero%20la%20ASESORÍA%20para%20mi%20negocio" class="whatsapp-float" target="_blank">
-        <svg width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <a href="https://wa.me/996304618?text=Hola,%20vengo%20de%20tu%20web%20y%20necesito%20una%20asesoría" class="btn-ws" target="_blank">
+        W
     </a>
 
     <script>
-        function calcular() {
-            const salary = document.getElementById('salary').value;
-            if (salary > 0) {
-                const desc = salary * 0.13;
-                const neto = salary - desc;
-                
-                document.getElementById('deduccion').innerText = 'S/ ' + desc.toFixed(2);
-                document.getElementById('neto').innerText = 'S/ ' + neto.toFixed(2);
-                document.getElementById('results').style.display = 'block';
-            } else {
-                alert('Por favor, ingresa un sueldo válido');
+        function calcularNeto() {
+            const s = document.getElementById('sueldo').value;
+            if(s > 0) {
+                const d = s * 0.13;
+                const n = s - d;
+                document.getElementById('desc').innerText = 'S/ ' + d.toFixed(2);
+                document.getElementById('neto').innerText = 'S/ ' + n.toFixed(2);
+                document.getElementById('resultado').style.display = 'block';
             }
         }
     </script>
 </body>
 </html>
-
