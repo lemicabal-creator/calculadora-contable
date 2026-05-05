@@ -1,182 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUADRAMAS CONTABILIDAD | Inteligencia Financiera para Importadores y MYPES</title>
-    <meta name="description" content="Contabilidad tecnológica para importadores, MYPES y emprendedores en Perú. Usamos automatización y datos para proteger tu empresa de multas SUNAT.">
-    <meta name="keywords" content="cuadramas contabilidad, contabilidad importadores peru, contabilidad automatizada, python para contadores, asesoría mype peru, costos importacion sunat">
-    <meta name="author" content="CUADRAMAS CONTABILIDAD">
-    <link rel="canonical" href="https://lemicabal-creator.github.io/calculadora-contable/">
-
-    <!-- Open Graph para Redes Sociales -->
-    <meta property="og:title" content="CUADRAMAS CONTABILIDAD | Más que contadores, arquitectos de datos">
-    <meta property="og:description" content="Automatizamos tu contabilidad. Especialistas en regímenes MYPE e importaciones con tecnología de vanguardia.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1454165833767-027ffea7028c?q=80&w=400">
-    <meta property="og:url" content="https://lemicabal-creator.github.io/calculadora-contable/">
-    <meta property="og:type" content="website">
-
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>CUADRAMAS CONTABILIDAD | Inteligencia Artificial para tu Negocio</title>
+    
+    <!-- SEO Básico -->
+    <meta name="description" content="Contabilidad moderna con Inteligencia Artificial en Perú. Especialistas en Importadores, MYPES y Emprendedores.">
+    
+    <!-- Fuentes Elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --color-primario: #001f3f; 
-            --color-secundario: #ff7e20; 
-            --color-riesgo: #e74c3c;
-            --color-fondo: #f8fafc;
-            --color-texto: #1a202c;
+            --azul: #003d7a;
+            --naranja: #ff6b00;
+            --fondo: #f4f7fa;
             --blanco: #ffffff;
+            --texto: #2d3748;
         }
 
-        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; background-color: var(--color-fondo); color: var(--color-texto); overflow-x: hidden; }
-        h1, h2, h3, .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
-        
-        nav { 
-            background-color: var(--color-primario); 
-        .menu a:hover { color: var(--color-secundario); }
-
-        .hero { 
-            background: linear-gradient(135deg, rgba(0,31,63,0.9) 0%, rgba(255,126,32,0.4) 100%), url('https://images.unsplash.com/photo-1551288049-bbbda546697c?auto=format&fit=crop&q=80') no-repeat center/cover; 
-            color: var(--blanco); 
-            padding: 140px 5%; 
-            text-align: center; 
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; 
+            background-color: var(--fondo); 
+            color: var(--texto);
+            line-height: 1.6;
         }
 
-        .section-title { text-align: center; margin: 40px 0 20px; color: var(--color-primario); font-size: 2.2rem; }
-
-        /* Carousel Styling */
-        .carousel-container {
+        /* Navegación */
+        nav {
+            background: var(--azul);
+            padding: 15px 5%;
             display: flex;
-            overflow-x: auto;
-            gap: 20px;
-            padding: 20px 5% 50px;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .carousel-container::-webkit-scrollbar { display: none; }
-        
-        .category-card { 
-            min-width: 300px;
-            background: var(--blanco); 
-            padding: 25px; 
-            border-radius: 20px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
-            border-top: 5px solid var(--color-secundario);
-            transition: 0.4s;
-        }
-        .category-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; }
 
-        /* Tech Stack Section */
-        .tech-stack {
-            background: #fff;
-            padding: 40px 5%;
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            background: var(--naranja);
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(0,61,122,0.8), rgba(0,61,122,0.8)), 
+                        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 5%;
             text-align: center;
         }
-        .tech-icons {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            filter: grayscale(1);
-            opacity: 0.6;
-        }
-        .tech-icons img { height: 40px; }
 
-        /* Hidden Tips Section */
-        .tips-section {
+        .hero h1 { font-size: 2.8rem; margin: 0; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin: 20px 0; }
+
+        /* Sección IA - Lo que nos hace diferentes */
+        .ia-section {
             padding: 60px 5%;
-            background: #001f3f;
-            color: white;
+            background: white;
+            text-align: center;
         }
-        .tip-card {
+
+        .ia-badge {
+            background: #e6fffa;
+            color: #2c7a7b;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Carrusel de Servicios */
+        .carousel-wrapper {
+            padding: 40px 5%;
+            overflow-x: auto;
+            display: flex;
+            gap: 20px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+        .carousel-wrapper::-webkit-scrollbar { display: none; }
+
+        .service-card {
+            min-width: 300px;
+            background: white;
+            border-radius: 20px;
+            padding: 0;
+            scroll-snap-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-bottom: 5px solid var(--naranja);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content { padding: 20px; }
+
+        /* Semáforo de Riesgo */
+        .semaforo {
+            background: var(--azul);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .btn-check {
             background: rgba(255,255,255,0.1);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .btn-check.active { background: var(--naranja); border-color: var(--naranja); }
+
+        /* Tips Creativos */
+        .tips-container {
+            padding: 60px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-box {
+            background: #fff8f4;
             padding: 25px;
             border-radius: 15px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--color-secundario);
+            border-left: 5px solid var(--naranja);
         }
 
-        .nosotros { 
-        
-        .vs-pingu { 
-            background: linear-gradient(135deg, #ffffff 0%, #fff0e6 100%);
-            padding: 30px; 
-            border-radius: 15px; 
-            border-left: 5px solid var(--color-secundario); 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        /* Botón Flotante WhatsApp */
+        .whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            z-index: 2000;
         }
-        .vs-pingu h3 { color: var(--color-secundario); font-size: 1.5rem; }
 
-        .semaforo-container { background: var(--color-primario); color: white; padding: 50px 5%; text-align: center; }
-    <nav role="navigation">
-        <a href="#inicio" class="logo">
-            <div id="logo-text" style="background: var(--color-secundario); padding: 5px 12px; border-radius: 8px; font-size: 1rem; color: white;">CUADRAMAS</div>
-            CONTABILIDAD
+        footer { background: #1a202c; color: white; padding: 40px 5%; text-align: center; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .menu { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">
+            <div class="logo-box">CUADRAMAS</div> CONTABILIDAD
         </a>
         <div class="menu">
-            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#riesgo">Evalúa tu Riesgo</a>
+            <a href="#tips">Tips Gratis</a>
+        </div>
+    </nav>
 
-    <section class="hero" id="inicio">
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">Contabilidad Evolucionada</h1>
-        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px;">No somos tenedores de libros. Somos arquitectos de datos fiscales para Importadores, MYPES y Visionarios.</p>
-        <a href="#calculadora" style="background: var(--color-secundario); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(255,126,32,0.4);">Probar Herramientas Digitales</a>
+    <header class="hero">
+        <h1>Tu contabilidad con Inteligencia Artificial</h1>
+        <p>No somos el contador de siempre. Usamos tecnología de punta para proteger tu dinero y evitar multas antes de que sucedan.</p>
+        <a href="#riesgo" style="background: var(--naranja); color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold;">EVALUAR MI NEGOCIO</a>
+    </header>
+
+    <section class="ia-section">
+        <span class="ia-badge">Tecnología IA</span>
+        <h2>¿Por qué Cuadramas es diferente?</h2>
+        <p style="max-width: 700px; margin: 20px auto;">Mientras otros contadores revisan papeles a fin de mes, nuestra <strong>Inteligencia Artificial</strong> revisa tus ventas y compras todos los días. Detectamos errores al instante para que nunca pagues multas por descuido.</p>
     </section>
 
-    <div class="tech-stack">
-        <h3 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Potenciados por Tecnología de Clase Mundial</h3>
-        <div class="tech-icons">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Cloud">
-        </div>
-    </div>
-
-    <section class="nosotros" id="nosotros">
-        <div>
-            <h2 style="font-size: 2.5rem; line-height: 1.1;">Por qué no somos un contador común</h2>
-            <p>El contador tradicional espera que le lleves papeles. Nosotros construimos puentes de datos. Usamos <strong>Python y Automatización de Procesos (RPA)</strong> para conectar tu caja con la SUNAT sin errores humanos.</p>
-            <p>En <strong>CUADRAMAS</strong>, el análisis de datos es nuestra brújula para que pagues lo justo y crezcas sin miedo.</p>
-        </div>
-        <div class="vs-pingu">
-            <h3>La diferencia Cuadramas</h3>
-            <p>🚀 <strong>Velocidad:</strong> Reportes en tiempo real, no a fin de mes.</p>
-            <p>🤖 <strong>Precisión:</strong> Algoritmos que detectan inconsistencias antes que la SUNAT.</p>
-            <p>🛡️ <strong>Blindaje:</strong> Especialistas en Defensa Legal e Impugnaciones.</p>
-        </div>
-    </section>
-
-    <h2 class="section-title" id="categorias">Soluciones Especializadas</h2>
-    <div class="carousel-container">
-        <div class="category-card">
+    <h2 style="text-align: center;" id="servicios">Soluciones para tu Crecimiento</h2>
+    <div class="carousel-wrapper">
+        <div class="service-card">
             <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=400" alt="Importadores">
-            <h3>Importadores Pro</h3>
-            <p>Dominamos el Costeo de Importación y el Drawback. Optimizamos tu flujo de caja en Aduanas.</p>
+            <div class="service-content">
+                <h3>Importadores</h3>
+                <p>Calculamos tus costos reales de aduanas y recuperamos tus impuestos legalmente.</p>
+            </div>
         </div>
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400" alt="MYPES">
-            <h3>Escalado MYPE</h3>
-            <p>Sal del Régimen Especial al MYPE con estrategia. Automatizamos tu planilla y libros electrónicos.</p>
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400" alt="MYPE">
+            <div class="service-content">
+                <h3>MYPE y Pymes</h3>
+                <p>Ordenamos tus libros electrónicos y planillas con sistemas automáticos.</p>
+            </div>
         </div>
-        <div class="category-card">
+        <div class="service-card">
             <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80&w=400" alt="Emprendedores">
-            <h3>Lanzamiento Emprendedor</h3>
-            <p>Constitución de empresas con enfoque en protección de activos. No dejes que el RUC manche tu historial.</p>
+            <div class="service-content">
+                <h3>Emprendedores</h3>
+                <p>Te ayudamos a formalizarte sin miedo y a elegir el régimen que menos impuestos paga.</p>
+            </div>
         </div>
     </div>
 
-    <section class="tips-section">
-        <h2 style="text-align: center; margin-bottom: 40px;">Tips Contables de Alto Nivel 💡</h2>
-        <div style="max-width: 900px; margin: 0 auto;">
-            <div class="tip-card">
-                <h4>El Límite de la Bancarización (Tip de Oro)</h4>
-                <p>¿Sabías que SUNAT no reconoce como gasto compras mayores a S/ 2,000 o $500 si no pasan por banco? Usa siempre transferencias para blindar tu crédito fiscal.</p>
-            </div>
-            <div class="tip-card">
-                <h4>Deducción por Capacitación</h4>
-                <p>Toda capacitación para tus empleados (o para ti como dueño si eres gerente) es deducible de impuestos hasta el 5% de tus ingresos. ¡Invierte en conocimiento!</p>
-            </div>
-            <div class="tip-card">
-                <h4>Automatiza tus XML</h4>
-                <p>No descargues facturas una por una. Usa una API para conectar tu facturador con un Excel dinámico. Esto reduce errores de digitación en un 100%.</p>
-            </div>
+    <section class="semaforo" id="riesgo">
+        <h2>Semáforo de Riesgo SUNAT</h2>
+        <p>Haz clic en lo que te sucede hoy para ver tu nivel de peligro:</p>
+        <div id="riesgo-checks">
+            <div class="btn-check" onclick="updateRisk(this, 30)">No tengo facturas de mis compras</div>
+            <div class="btn-check" onclick="updateRisk(this, 25)">Uso mi cuenta personal para el negocio</div>
+            <div class="btn-check" onclick="updateRisk(this, 20)">Mi contador no me responde</div>
+            <div class="btn-check" onclick="updateRisk(this, 25)">No declaro a tiempo</div>
         </div>
+        <h3 style="margin-top: 30px;">Nivel de Riesgo: <span id="risk-score">0</span>%</h3>
+        <p id="risk-msg">Estás en zona segura.</p>
     </section>
+
+    <h2 style="text-align: center; margin-top: 60px;" id="tips">Tips que tu contador no te dice 💡</h2>
+    <div class="tips-container">
+        <div class="tip-box">
+            <h4>La Regla de las 48 Horas</h4>
+            <p>Si emites facturas electrónicas, revisa que SUNAT las acepte en máximo 2 días. Si esperas más, podrías estar vendiendo sin validez legal.</p>
+        </div>
+        <div class="tip-box">
+            <h4>Gastos de "Representación"</h4>
+            <p>¿Almuerzas con clientes? Puedes deducir esos gastos de tus impuestos hasta un límite. No pierdas ese dinero.</p>
+        </div>
+        <div class="tip-box">
+            <h4>Bancarización Total</h4>
+            <p>Todo pago mayor a S/ 2,000 debe hacerse por banco obligatoriamente. Si pagas en efectivo, SUNAT no reconocerá ese gasto.</p>
+        </div>
+    </div>
+
+    <footer>
+        <h3>CUADRAMAS CONTABILIDAD</h3>
+        <p>Inteligencia Artificial al servicio de tu tranquilidad financiera.</p>
+        <p>&copy; 2024 Lima, Perú</p>
+    </footer>
+
+    <a href="https://wa.me/51996304618?text=Hola%20Cuadramas,%20necesito%20ayuda%20con%20mi%20contabilidad" class="whatsapp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WhatsApp">
+    </a>
+
+    <script>
+        let totalRisk = 0;
+        function updateRisk(el, val) {
+            el.classList.toggle('active');
+            totalRisk += el.classList.contains('active') ? val : -val;
+            
+            const scoreEl = document.getElementById('risk-score');
+            const msgEl = document.getElementById('risk-msg');
+            scoreEl.innerText = totalRisk;
+
+            if(totalRisk >= 70) {
+                msgEl.innerText = "¡PELIGRO! Multa muy probable. Contáctanos urgente.";
+                msgEl.style.color = "#ff4d4d";
+            } else if(totalRisk >= 30) {
+                msgEl.innerText = "ALERTA. Tienes puntos débiles que SUNAT detectará.";
+                msgEl.style.color = "#ffa500";
+            } else {
+                msgEl.innerText = "Estás en zona segura.";
+                msgEl.style.color = "#2ecc71";
+            }
+        }
+    </script>
+</body>
+</html>
