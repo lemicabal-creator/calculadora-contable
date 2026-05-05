@@ -1,42 +1,317 @@
-            --color-primario: #003d7a;
-            --color-secundario: #ff6b00;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contabilidad Sin Multas | Asesoría Contable en Perú para Emprendedores</title>
+    <meta name="description" content="Evita multas de SUNAT con asesoría contable experta en Perú. Especialistas en RUC 20, Nuevo RUS, Régimen MYPE y gestión de planillas. ¡Protege tu negocio hoy!">
+    <meta name="keywords" content="contabilidad peru, asesoría contable lima, evitar multas sunat, ruc 20, nuevo rus, regimen mype, declaraciones sunat, contador para emprendedores, contabilidad sin multas">
+    <meta name="author" content="Contabilidad Sin Multas">
+    <link rel="canonical" href="https://lemicabal-creator.github.io/calculadora-contable/">
+
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="Contabilidad Sin Multas | Asesoría Contable Profesional">
+    <meta property="og:description" content="No dejes que las multas detengan tu crecimiento. Expertos en prevención tributaria y gestión contable para dueños de negocio.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1454165833767-027ffea7028c?q=80&w=400">
+    <meta property="og:url" content="https://lemicabal-creator.github.io/calculadora-contable/">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primario: #003d7a; /* Azul Profesional */
+            --color-secundario: #ff6b00; /* Naranja Vibrante */
             --color-riesgo: #e74c3c;
             --color-fondo: #f8fafc;
             --color-texto: #333;
             --blanco: #ffffff;
         }
+
+        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: var(--color-fondo); color: var(--color-texto); }
         h1, h2, h3, .logo { font-family: 'Montserrat', sans-serif; font-weight: 700; }
-        nav { background-color: var(--color-primario); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; height: 70px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        
+        nav { 
+            background-color: var(--color-primario); 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 70px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        }
+        
         .logo { color: var(--blanco); text-decoration: none; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
         .logo img { height: 45px; width: auto; object-fit: contain; }
+        
         .menu { display: flex; gap: 20px; }
         .menu a { color: var(--blanco); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
         .menu a:hover { color: var(--color-secundario); }
-        .hero { background: linear-gradient(rgba(0,61,122,0.85), rgba(0,61,122,0.85)), url('https://images.unsplash.com/photo-1454165833767-027ffea7028c?auto=format&fit=crop&q=80') no-repeat center/cover; color: var(--blanco); padding: 100px 5%; text-align: center; }
+
+        .hero { 
+            background: linear-gradient(rgba(0,61,122,0.85), rgba(0,61,122,0.85)), url('https://images.unsplash.com/photo-1454165833767-027ffea7028c?auto=format&fit=crop&q=80') no-repeat center/cover; 
+            color: var(--blanco); 
+            padding: 100px 5%; 
+            text-align: center; 
+        }
+
         .section-title { text-align: center; margin: 40px 0 20px; color: var(--color-primario); }
-        .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 5% 40px; }
-        .category-card { background: var(--blanco); padding: 25px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-bottom: 4px solid var(--color-secundario); transition: transform 0.3s; }
+        
+        .categories-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            padding: 0 5% 40px; 
+        }
+        
+        .category-card { 
+            background: var(--blanco); 
+            padding: 25px; 
+            border-radius: 10px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+            border-bottom: 4px solid var(--color-secundario); 
+            transition: transform 0.3s; 
+        }
+        .category-card:hover { transform: translateY(-5px); }
         .category-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
-        .nosotros { padding: 60px 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; background-color: #f8f9fa; }
+
+        .nosotros { 
+            padding: 60px 5%; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px; 
+            align-items: center; 
+            background-color: #f8f9fa; 
+        }
+        
+        .vs-pingu { 
+            background: var(--blanco); 
+            padding: 30px; 
+            border-radius: 15px; 
+            border-left: 5px solid var(--color-secundario); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        }
+        .vs-pingu h3 { color: var(--color-primario); }
+
+        .semaforo-container { background: var(--color-primario); color: white; padding: 50px 5%; text-align: center; }
+        .check-item { 
+            display: inline-block; 
+            margin: 10px; 
+            background: rgba(255,255,255,0.1); 
+            padding: 15px; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+        .check-item.active { background: var(--color-secundario); }
+        
+        #nivel-riesgo { font-size: 2rem; margin: 20px 0; font-weight: bold; }
+
+        .testimonios { padding: 60px 5%; text-align: center; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .t-card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); font-style: italic; }
+
         .social-links { background: #eee; padding: 30px; text-align: center; }
         .social-icon { display: inline-block; margin: 0 15px; text-decoration: none; font-weight: bold; color: var(--color-primario); transition: 0.3s; }
         .social-icon:hover { color: var(--color-secundario); transform: scale(1.1); }
-        .calc-section { background-color: var(--blanco); max-width: 500px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); scroll-margin-top: 100px; }
+
+        .calc-section { 
+            background-color: var(--blanco); 
+            max-width: 500px; 
+            margin: 40px auto; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            scroll-margin-top: 100px; 
+        }
+        
         input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-        button { width: 100%; background-color: var(--color-primario); color: white; padding: 15px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        button { 
+            width: 100%; 
+            background-color: var(--color-primario); 
+            color: white; 
+            padding: 15px; 
+            border: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            transition: background 0.3s; 
+        }
         button:hover { background-color: #004080; }
+        
+        .result { margin-top: 20px; padding: 15px; background: #eef2f7; border-radius: 8px; display: none; }
+        
+        .btn-ws { 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            background-color: #25d366; 
+            color: white; 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+            text-decoration: none; 
+            z-index: 1000; 
+        }
+        
+        footer { background: var(--color-primario); color: white; text-align: center; padding: 20px; font-size: 0.8rem; }
+        
+        @media (max-width: 600px) { 
+            .menu { display: none; } 
+            .nosotros { grid-template-columns: 1fr; } 
+        }
     </style>
 </head>
 <body>
     <nav role="navigation">
         <a href="#inicio" class="logo">
-            <!-- 
-                Si subes tu logo a GitHub, asegúrate de que se llame logo.png 
-                y esté en la misma carpeta que este index.html.
-                Si no está, el bloque CSM naranja aparecerá automáticamente.
-            -->
             <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
             <div id="logo-text" style="background: var(--color-secundario); padding: 5px 8px; border-radius: 3px; font-size: 0.8rem; color: white;">CSM</div>
             @contabilidadsinmultas
+        </a>
+        <div class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#semaforo">Riesgo</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="https://wa.me/51999999999">Contacto</a>
+        </div>
+    </nav>
 
+    <section class="hero" id="inicio">
+        <h1>Protege tu patrimonio, declara sin multas</h1>
+        <p>Asesoría contable especializada para emprendedores y dueños de negocio.</p>
+    </section>
 
+    <section class="nosotros" id="nosotros">
+        <div>
+            <h2>Quiénes Somos</h2>
+            <p>En <strong>Contabilidad Sin Multas</strong>, no solo llenamos formularios. Somos estrategas financieros dedicados a que el dueño de negocio duerma tranquilo. Nos enfocamos en la prevención técnica para que el crecimiento de tu empresa no se vea frenado por sanciones de SUNAT.</p>
+        </div>
+        <div class="vs-pingu">
+            <h3>¿Por qué elegirnos?</h3>
+            <p>A diferencia de otras propuestas que se centran en el humor, nosotros priorizamos la <strong>autoridad técnica y la defensa legal</strong> del contribuyente. Dominamos herramientas avanzadas para automatizar tu control de caja.</p>
+        </div>
+    </section>
+
+    <h2 class="section-title" id="categorias">Categorías de Servicios</h2>
+    <div class="categories-grid">
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=400" alt="Documentos">
+            <h3>Documentos Fiscales</h3>
+            <p>Organización de facturas, boletas y guías de remisión.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=400" alt="Recibos">
+            <h3>Recibos y Honorarios</h3>
+            <p>Gestión de cuarta categoría y retenciones sin errores.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bbbda546697c?auto=format&fit=crop&q=80&w=400" alt="Sistemas">
+            <h3>Sistemas y Excel</h3>
+            <p>Control de caja y reportes financieros automáticos.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=400" alt="Dueños">
+            <h3>Dueños de Negocio</h3>
+            <p>Asesoría estratégica para emprendedores preocupados por su crecimiento.</p>
+        </div>
+    </div>
+
+    <section class="semaforo-container" id="semaforo">
+        <h2>Semáforo de Riesgo Tributario</h2>
+        <p>Selecciona los problemas que tienes hoy:</p>
+        <div class="check-item" onclick="toggleRisk(this, 30)">No declaro a tiempo</div>
+        <div class="check-item" onclick="toggleRisk(this, 25)">Mezclo gastos personales</div>
+        <div class="check-item" onclick="toggleRisk(this, 20)">No tengo libros legales</div>
+        <div class="check-item" onclick="toggleRisk(this, 25)">Facturas sin sustento</div>
+        <div id="nivel-riesgo">Riesgo: <span id="riesgo-valor">0</span>%</div>
+        <div id="semaforo-msj">Estás en zona segura por ahora.</div>
+        <br>
+        <a href="https://wa.me/51999999999" style="color: var(--color-secundario); font-weight: bold; text-decoration: none;">¿Quieres bajar este riesgo? Contáctanos.</a>
+    </section>
+
+    <section class="testimonios" id="testimonios">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <div class="testimonial-grid">
+            <div class="t-card">
+                <p>"Tenía miedo por una fiscalización de SUNAT, pero CSM organizó todo mi Excel y salí sin multas. ¡Recomendados!"</p>
+                <strong>- Carlos R. (Importador)</strong>
+            </div>
+            <div class="t-card">
+                <p>"Su asesoría técnica es otro nivel. Realmente entienden el negocio, no solo los impuestos."</p>
+                <strong>- Ana M. (Servicios Médicos)</strong>
+            </div>
+            <div class="t-card">
+                <p>"Por fin un contador que me habla claro y me ayuda a ahorrar dinero legalmente."</p>
+                <strong>- Jorge L. (E-commerce)</strong>
+            </div>
+        </div>
+    </section>
+
+    <div class="social-links">
+        <h3>Síguenos para más tips</h3>
+        <a href="https://tiktok.com/@contabilidadsinmultas" class="social-icon">TikTok</a>
+        <a href="https://instagram.com/contabilidadsinmultas" class="social-icon">Instagram</a>
+        <a href="https://youtube.com/@contabilidadsinmultas" class="social-icon">YouTube</a>
+    </div>
+
+    <div class="calc-section" id="calculadora">
+        <h2 style="text-align:center; color: var(--color-primario);">Calculadora de Sueldo Neto</h2>
+        <label for="sueldo">Ingresa tu sueldo bruto mensual:</label>
+        <input type="number" id="sueldo" placeholder="S/ 2000.00">
+        <button onclick="calcularNeto()">Calcular Ahora</button>
+        
+        <div id="resultado" class="result">
+            <p>Descuento Ley (13%): <strong id="desc"></strong></p>
+            <p style="font-size: 1.2rem; color: var(--color-primario);">Sueldo Neto: <strong id="neto"></strong></p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Contabilidad Sin Multas | Lima, Perú.
+    </footer>
+
+    <a href="https://wa.me/51996304618?text=Hola,%20vengo%20de%20tu%20web%20y%20necesito%20una%20asesoría" class="btn-ws" target="_blank" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
+    </a>
+
+    <script>
+        let totalRisk = 0;
+        function toggleRisk(element, val) {
+            element.classList.toggle('active');
+            totalRisk += element.classList.contains('active') ? val : -val;
+            const valDisplay = document.getElementById('riesgo-valor');
+            const msjDisplay = document.getElementById('semaforo-msj');
+            if(valDisplay && msjDisplay) {
+                valDisplay.innerText = totalRisk;
+                if(totalRisk >= 70) { valDisplay.style.color = "#ff4d4d"; msjDisplay.innerText = "¡PELIGRO! Multa inminente. Necesitas asesoría URGENTE."; }
+                else if(totalRisk >= 30) { valDisplay.style.color = "#ffa500"; msjDisplay.innerText = "CUIDADO. SUNAT podría ponerte en la mira pronto."; }
+                else { valDisplay.style.color = "#2ecc71"; msjDisplay.innerText = "Zona segura, pero no te descuides."; }
+            }
+        }
+
+        function calcularNeto() {
+            const s = document.getElementById('sueldo').value;
+            const descDisplay = document.getElementById('desc');
+            const netoDisplay = document.getElementById('neto');
+            const resultadoBox = document.getElementById('resultado');
+            if (s > 0 && descDisplay && netoDisplay && resultadoBox) {
+                const d = s * 0.13;
+                const n = s - d;
+                descDisplay.innerText = 'S/ ' + d.toFixed(2);
+                netoDisplay.innerText = 'S/ ' + n.toFixed(2);
+                resultadoBox.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
