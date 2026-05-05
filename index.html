@@ -1,34 +1,54 @@
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contabilidad Sin Multas | Asesoría Contable en Perú para Emprendedores</title>
-    <meta name="description" content="Evita multas de SUNAT con asesoría contable experta en Perú. Especialistas en RUC 20, Nuevo RUS, Régimen MYPE y gestión de planillas. ¡Protege tu negocio hoy!">
-    <meta name="keywords" content="contabilidad peru, asesoría contable lima, evitar multas sunat, ruc 20, nuevo rus, regimen mype, declaraciones sunat, contador para emprendedores, contabilidad sin multas">
-    <meta name="author" content="Contabilidad Sin Multas">
-    <link rel="canonical" href="https://lemicabal-creator.github.io/calculadora-contable/">
+           <a href="https://youtube.com/@contabilidadsinmultas" class="social-icon">YouTube</a>
+    </div>
 
-    <!-- Open Graph para Redes Sociales -->
-    <meta property="og:title" content="Contabilidad Sin Multas | Asesoría Contable Profesional">
-    <meta property="og:description" content="No dejes que las multas detengan tu crecimiento. Expertos en prevención tributaria y gestión contable para dueños de negocio.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1454165833767-027ffea7028c?q=80&w=400">
-    <meta property="og:url" content="https://lemicabal-creator.github.io/calculadora-contable/">
-    <meta property="og:type" content="website">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
+    <div class="calc-section" id="calculadora">
+        <h2 style="text-align:center; color: var(--color-primario);">Calculadora de Sueldo Neto</h2>
+        <label for="sueldo">Ingresa tu sueldo bruto mensual:</label>
     <a href="https://wa.me/996304618?text=Hola,%20vengo%20de%20tu%20web%20y%20necesito%20una%20asesoría" class="btn-ws" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
     </a>
 
     <script>
+        // Lógica del Semáforo de Riesgo
+        let totalRisk = 0;
+        function toggleRisk(element, val) {
+            element.classList.toggle('active');
+            if(element.classList.contains('active')) {
+                totalRisk += val;
+            } else {
+                totalRisk -= val;
+            }
+            const valDisplay = document.getElementById('riesgo-valor');
+            const msjDisplay = document.getElementById('semaforo-msj');
+            if(valDisplay && msjDisplay) {
+                valDisplay.innerText = totalRisk;
+                if(totalRisk >= 70) {
+                    valDisplay.style.color = "#ff4d4d";
+                    msjDisplay.innerText = "¡PELIGRO! Multa inminente. Necesitas asesoría URGENTE.";
+                } else if(totalRisk >= 30) {
+                    valDisplay.style.color = "#ffa500";
+                    msjDisplay.innerText = "CUIDADO. SUNAT podría ponerte en la mira pronto.";
+                } else {
+                    valDisplay.style.color = "#2ecc71";
+                    msjDisplay.innerText = "Zona segura, pero no te descuides.";
+                }
+            }
+        }
+
+        // Lógica de la Calculadora de Sueldo
         function calcularNeto() {
             const s = document.getElementById('sueldo').value;
-            if (s > 0) {
+            const descDisplay = document.getElementById('desc');
+            const netoDisplay = document.getElementById('neto');
+            const resultadoBox = document.getElementById('resultado');
+
+            if (s > 0 && descDisplay && netoDisplay && resultadoBox) {
                 const d = s * 0.13;
                 const n = s - d;
-                document.getElementById('desc').innerText = 'S/ ' + d.toFixed(2);
-                document.getElementById('neto').innerText = 'S/ ' + n.toFixed(2);
-                document.getElementById('resultado').style.display = 'block';
+                descDisplay.innerText = 'S/ ' + d.toFixed(2);
+                netoDisplay.innerText = 'S/ ' + n.toFixed(2);
+                resultadoBox.style.display = 'block';
             }
         }
     </script>
+
