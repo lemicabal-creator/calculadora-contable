@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUADRAMAS CONTABILIDAD | Inteligencia Artificial para tu Negocio</title>
+    <title>CUADRAMAS CONTABILIDAD | Inteligencia Artificial y Soluciones Financieras</title>
     
-    <!-- SEO Básico -->
-    <meta name="description" content="Contabilidad moderna con Inteligencia Artificial en Perú. Especialistas en Importadores, MYPES y Emprendedores.">
-    
-    <!-- Fuentes Elegantes -->
+    <!-- SEO y Metadatos -->
+    <meta name="description" content="Contabilidad avanzada con IA en Perú. Especialistas en Importadores y MYPES.">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --azul: #003d7a;
             --naranja: #ff6b00;
-            --fondo: #f4f7fa;
+            --fondo: #f8fafc;
             --blanco: #ffffff;
-            --texto: #2d3748;
+            --texto: #1a202c;
         }
 
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             margin: 0; 
@@ -51,118 +49,153 @@
             gap: 10px;
         }
 
-        .logo-box {
-            background: var(--naranja);
-            padding: 5px 10px;
-            border-radius: 6px;
-        }
+        .logo-box { background: var(--naranja); padding: 5px 10px; border-radius: 6px; }
 
         .menu a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.9rem;
+            margin-left: 15px;
+            font-size: 0.85rem;
             font-weight: 600;
         }
 
-        /* Banner Principal */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,61,122,0.8), rgba(0,61,122,0.8)), 
+            background: linear-gradient(rgba(0,61,122,0.85), rgba(0,61,122,0.85)), 
                         url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 5%;
+            padding: 120px 5%;
             text-align: center;
         }
 
-        .hero h1 { font-size: 2.8rem; margin: 0; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; margin: 20px 0; }
+        .hero h1 { font-size: 3rem; margin: 0; }
+        .hero p { font-size: 1.2rem; margin: 20px 0; opacity: 0.9; }
 
-        /* Sección IA - Lo que nos hace diferentes */
+        /* IA Section */
         .ia-section {
-            padding: 60px 5%;
+            padding: 80px 5%;
             background: white;
             text-align: center;
         }
 
-        .ia-badge {
-            background: #e6fffa;
-            color: #2c7a7b;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
+        .section-title { font-size: 2rem; color: var(--azul); margin-bottom: 20px; }
 
         /* Carrusel de Servicios */
         .carousel-wrapper {
-            padding: 40px 5%;
+            padding: 20px 5% 60px;
             overflow-x: auto;
             display: flex;
             gap: 20px;
-            scroll-snap-type: x mandatory;
             scrollbar-width: none;
         }
         .carousel-wrapper::-webkit-scrollbar { display: none; }
 
-        .service-card {
+        .card {
             min-width: 300px;
             background: white;
             border-radius: 20px;
-            padding: 0;
-            scroll-snap-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             overflow: hidden;
-            border-bottom: 5px solid var(--naranja);
+            transition: 0.3s;
         }
 
-        .service-card img {
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 25px; }
+
+        /* Sección de Herramientas (NUEVA) */
+        .tools-section {
+            padding: 80px 5%;
+            background: #f1f5f9;
+        }
+
+        .calculator-box {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        input {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
         }
 
-        .service-content { padding: 20px; }
+        .btn-action {
+            width: 100%;
+            background: var(--naranja);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
         /* Semáforo de Riesgo */
         .semaforo {
             background: var(--azul);
             color: white;
-            padding: 60px 5%;
+            padding: 80px 5%;
             text-align: center;
         }
 
-        .btn-check {
-            background: rgba(255,255,255,0.1);
-            border: 2px solid white;
-            color: white;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 30px;
-            cursor: pointer;
+        .check-pill {
             display: inline-block;
+            padding: 12px 25px;
+            margin: 8px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        .btn-check.active { background: var(--naranja); border-color: var(--naranja); }
+        .check-pill.active { background: var(--naranja); border-color: var(--naranja); }
 
-        /* Tips Creativos */
-        .tips-container {
-            padding: 60px 5%;
+        /* Testimonios */
+        .testimonios { padding: 80px 5%; background: white; text-align: center; }
+        .t-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
-
-        .tip-box {
-            background: #fff8f4;
-            padding: 25px;
+        .t-card {
+            padding: 30px;
+            background: var(--fondo);
             border-radius: 15px;
-            border-left: 5px solid var(--naranja);
+            position: relative;
+            text-align: left;
+        }
+        .t-card::before { content: "“"; font-size: 4rem; color: var(--naranja); position: absolute; top: -10px; left: 10px; opacity: 0.3; }
+
+        /* Tips Section */
+        .tips-grid {
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .tip-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            border-top: 5px solid var(--naranja);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        /* Botón Flotante WhatsApp */
-        .whatsapp {
+        /* Footer y Social */
+        footer { background: #0f172a; color: white; padding: 60px 5%; text-align: center; }
+        .social-links a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+
+        .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
@@ -173,14 +206,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
             z-index: 2000;
         }
 
-        footer { background: #1a202c; color: white; padding: 40px 5%; text-align: center; }
-
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
+            .hero h1 { font-size: 2.2rem; }
             .menu { display: none; }
         }
     </style>
@@ -193,106 +224,144 @@
         </a>
         <div class="menu">
             <a href="#servicios">Servicios</a>
-            <a href="#riesgo">Evalúa tu Riesgo</a>
-            <a href="#tips">Tips Gratis</a>
+            <a href="#herramientas">Herramientas</a>
+            <a href="#riesgo">Riesgo</a>
+            <a href="#testimonios">Testimonios</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>Tu contabilidad con Inteligencia Artificial</h1>
-        <p>No somos el contador de siempre. Usamos tecnología de punta para proteger tu dinero y evitar multas antes de que sucedan.</p>
-        <a href="#riesgo" style="background: var(--naranja); color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold;">EVALUAR MI NEGOCIO</a>
+        <h1>Arquitectura Contable con IA</h1>
+        <p>Potenciamos el crecimiento de Importadores y MYPES con tecnología de vanguardia y precisión absoluta.</p>
+        <a href="#riesgo" class="btn-action" style="max-width: 250px; display: inline-block; text-decoration: none;">MI NIVEL DE RIESGO</a>
     </header>
 
     <section class="ia-section">
-        <span class="ia-badge">Tecnología IA</span>
-        <h2>¿Por qué Cuadramas es diferente?</h2>
-        <p style="max-width: 700px; margin: 20px auto;">Mientras otros contadores revisan papeles a fin de mes, nuestra <strong>Inteligencia Artificial</strong> revisa tus ventas y compras todos los días. Detectamos errores al instante para que nunca pagues multas por descuido.</p>
+        <h2 class="section-title">¿Por qué usar Inteligencia Artificial?</h2>
+        <p style="max-width: 800px; margin: 0 auto;">En <strong>CUADRAMAS</strong>, la IA no reemplaza al contador, lo hace infalible. Analizamos tus datos en tiempo real para predecir alertas de SUNAT y optimizar tus impuestos legalmente todos los días, no solo a fin de mes.</p>
     </section>
 
-    <h2 style="text-align: center;" id="servicios">Soluciones para tu Crecimiento</h2>
+    <h2 style="text-align: center;" id="servicios">Servicios Especializados</h2>
     <div class="carousel-wrapper">
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=400" alt="Importadores">
-            <div class="service-content">
-                <h3>Importadores</h3>
-                <p>Calculamos tus costos reales de aduanas y recuperamos tus impuestos legalmente.</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=400" alt="Importación">
+            <div class="card-content">
+                <h3>Expertos en Importación</h3>
+                <p>Dominamos costos de aduanas, Drawback y liquidaciones precisas para que tu mercadería fluya sin multas.</p>
             </div>
         </div>
-        <div class="service-card">
+        <div class="card">
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400" alt="MYPE">
-            <div class="service-content">
-                <h3>MYPE y Pymes</h3>
-                <p>Ordenamos tus libros electrónicos y planillas con sistemas automáticos.</p>
+            <div class="card-content">
+                <h3>Potencia MYPE</h3>
+                <p>Automatizamos tus libros electrónicos y planillas. Escalamos tu negocio del RUS al Régimen MYPE con estrategia.</p>
             </div>
         </div>
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80&w=400" alt="Emprendedores">
-            <div class="service-content">
-                <h3>Emprendedores</h3>
-                <p>Te ayudamos a formalizarte sin miedo y a elegir el régimen que menos impuestos paga.</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=400" alt="Tecnología">
+            <div class="card-content">
+                <h3>Contabilidad Tech</h3>
+                <p>Integramos tus sistemas de ventas directamente con nuestra contabilidad mediante procesos automáticos.</p>
             </div>
         </div>
     </div>
+
+    <section class="tools-section" id="herramientas">
+        <h2 class="section-title" style="text-align: center;">Herramientas Gratuitas</h2>
+        <p style="text-align: center; margin-bottom: 40px;">Diseñadas para ayudar a contadores y clientes a tomar mejores decisiones.</p>
+        <div class="calculator-box">
+            <h3>Calculadora de Sueldo Neto</h3>
+            <p>Calcula cuánto recibirás después de los descuentos de ley (AFP/ONP).</p>
+            <input type="number" id="salaryInput" placeholder="Sueldo Bruto (Ej: 2000)">
+            <button class="btn-action" onclick="calculateSalary()">CALCULAR SUELDO</button>
+            <div id="salaryResult" style="margin-top: 20px; display: none; padding: 15px; background: #f8fafc; border-radius: 10px;">
+                <p>Descuento estimado (13%): <strong id="descValue"></strong></p>
+                <p style="font-size: 1.2rem; color: var(--azul);">Neto a cobrar: <strong id="netValue"></strong></p>
+            </div>
+        </div>
+    </section>
 
     <section class="semaforo" id="riesgo">
         <h2>Semáforo de Riesgo SUNAT</h2>
-        <p>Haz clic en lo que te sucede hoy para ver tu nivel de peligro:</p>
-        <div id="riesgo-checks">
-            <div class="btn-check" onclick="updateRisk(this, 30)">No tengo facturas de mis compras</div>
-            <div class="btn-check" onclick="updateRisk(this, 25)">Uso mi cuenta personal para el negocio</div>
-            <div class="btn-check" onclick="updateRisk(this, 20)">Mi contador no me responde</div>
-            <div class="btn-check" onclick="updateRisk(this, 25)">No declaro a tiempo</div>
-        </div>
-        <h3 style="margin-top: 30px;">Nivel de Riesgo: <span id="risk-score">0</span>%</h3>
-        <p id="risk-msg">Estás en zona segura.</p>
+        <p>Identifica tus vulnerabilidades fiscales antes que la autoridad lo haga:</p>
+        <div class="check-pill" onclick="risk(this, 35)">No emito facturas por todas mis ventas</div>
+        <div class="check-pill" onclick="risk(this, 25)">Uso mi cuenta personal para cobrar</div>
+        <div class="check-pill" onclick="risk(this, 20)">Mi contador desaparece a fin de mes</div>
+        <div class="check-pill" onclick="risk(this, 20)">Mis gastos no tienen sustento real</div>
+        <h3 style="margin-top: 40px;">Puntaje de Riesgo: <span id="riskScore">0</span>%</h3>
+        <p id="riskMsg">Zona Segura</p>
     </section>
 
-    <h2 style="text-align: center; margin-top: 60px;" id="tips">Tips que tu contador no te dice 💡</h2>
-    <div class="tips-container">
-        <div class="tip-box">
-            <h4>La Regla de las 48 Horas</h4>
-            <p>Si emites facturas electrónicas, revisa que SUNAT las acepte en máximo 2 días. Si esperas más, podrías estar vendiendo sin validez legal.</p>
+    <section class="testimonios" id="testimonios">
+        <h2 class="section-title">Clientes que duermen tranquilos</h2>
+        <div class="t-grid">
+            <div class="t-card">
+                <p>"Gracias a Cuadramas recuperamos impuestos de importación que dábamos por perdidos. Su sistema de IA es increíble."</p>
+                <strong>- Ricardo M. (Importador Textil)</strong>
+            </div>
+            <div class="t-card">
+                <p>"Pasé de tener un desorden total en mis cuentas a tener reportes claros cada semana. El trato es súper profesional."</p>
+                <strong>- Elena G. (Dueña de MYPE)</strong>
+            </div>
+            <div class="t-card">
+                <p>"Lo que más valoro es la prevención. Me avisaron de un error en una factura antes de enviarla a SUNAT."</p>
+                <strong>- Juan C. (Consultor Tech)</strong>
+            </div>
         </div>
-        <div class="tip-box">
-            <h4>Gastos de "Representación"</h4>
-            <p>¿Almuerzas con clientes? Puedes deducir esos gastos de tus impuestos hasta un límite. No pierdas ese dinero.</p>
+    </section>
+
+    <div class="tips-grid" id="tips">
+        <div class="tip-card">
+            <h4>Tip para Importadores</h4>
+            <p>La bancarización es clave. Si pagas más de $500 en efectivo, pierdes el derecho al crédito fiscal y el costo para tu declaración.</p>
         </div>
-        <div class="tip-box">
-            <h4>Bancarización Total</h4>
-            <p>Todo pago mayor a S/ 2,000 debe hacerse por banco obligatoriamente. Si pagas en efectivo, SUNAT no reconocerá ese gasto.</p>
+        <div class="tip-card">
+            <h4>Tip para MYPES</h4>
+            <p>Si estás en el RER, no puedes deducir gastos. Evalúa pasar al Régimen MYPE si tus compras son altas para pagar menos impuesto a la renta.</p>
+        </div>
+        <div class="tip-card">
+            <h4>Tip de Tecnología</h4>
+            <p>Usa la Inteligencia Artificial para categorizar tus gastos automáticamente. Ahorra horas de trabajo y evita errores humanos.</p>
         </div>
     </div>
 
+    <div class="social-links" style="padding: 40px; text-align: center; background: #f1f5f9;">
+        <a href="https://tiktok.com/@cuadramas" style="color: #000;">TikTok</a>
+        <a href="https://youtube.com/@cuadramas" style="color: #f00;">YouTube</a>
+        <a href="https://instagram.com/cuadramas" style="color: #e1306c;">Instagram</a>
+    </div>
+
     <footer>
-        <h3>CUADRAMAS CONTABILIDAD</h3>
-        <p>Inteligencia Artificial al servicio de tu tranquilidad financiera.</p>
-        <p>&copy; 2024 Lima, Perú</p>
+        <p>&copy; 2024 CUADRAMAS CONTABILIDAD - Lima, Perú</p>
+        <p>Estrategia, Tecnología y Blindaje Fiscal</p>
     </footer>
 
-    <a href="https://wa.me/51996304618?text=Hola%20Cuadramas,%20necesito%20ayuda%20con%20mi%20contabilidad" class="whatsapp" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WhatsApp">
+    <a href="https://wa.me/51999999999?text=Hola%20Cuadramas,%20solicito%20una%20auditoría%20contable" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
     </a>
 
     <script>
-        let totalRisk = 0;
-        function updateRisk(el, val) {
+        // Lógica del Semáforo
+        let currentRisk = 0;
+        function risk(el, val) {
             el.classList.toggle('active');
-            totalRisk += el.classList.contains('active') ? val : -val;
-            
-            const scoreEl = document.getElementById('risk-score');
-            const msgEl = document.getElementById('risk-msg');
-            scoreEl.innerText = totalRisk;
+            currentRisk += el.classList.contains('active') ? val : -val;
+            document.getElementById('riskScore').innerText = currentRisk;
+            const msg = document.getElementById('riskMsg');
+            if(currentRisk >= 70) { msg.innerText = "¡PELIGRO! Multa Inminente"; msg.style.color = "red"; }
+            else if(currentRisk >= 30) { msg.innerText = "ALERTA: Tienes puntos ciegos"; msg.style.color = "orange"; }
+            else { msg.innerText = "Zona Segura"; msg.style.color = "green"; }
+        }
 
-            if(totalRisk >= 70) {
-                msgEl.innerText = "¡PELIGRO! Multa muy probable. Contáctanos urgente.";
-                msgEl.style.color = "#ff4d4d";
-            } else if(totalRisk >= 30) {
-                msgEl.innerText = "ALERTA. Tienes puntos débiles que SUNAT detectará.";
-                msgEl.style.color = "#ffa500";
-            } else {
-                msgEl.innerText = "Estás en zona segura.";
-                msgEl.style.color = "#2ecc71";
+        // Lógica de la Calculadora
+        function calculateSalary() {
+            const val = document.getElementById('salaryInput').value;
+            if(val > 0) {
+                const desc = val * 0.13;
+                const net = val - desc;
+                document.getElementById('descValue').innerText = "S/ " + desc.toFixed(2);
+                document.getElementById('netValue').innerText = "S/ " + net.toFixed(2);
+                document.getElementById('salaryResult').style.display = "block";
             }
         }
     </script>
